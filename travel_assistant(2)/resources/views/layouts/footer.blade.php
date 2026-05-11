@@ -1,0 +1,4 @@
+<footer class="copyright">
+    Copyright &copy; 2026 CryptoVault. Designed by <a href="https://templatemo.com" target="_blank"
+        rel="nofollow">TemplateMo</a>
+</footer>
