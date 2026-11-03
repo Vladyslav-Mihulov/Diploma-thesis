@@ -1,0 +1,233 @@
+/* ========================================
+   TravelVM - small additions on top of the CryptoVault template
+======================================== */
+
+/* ========================================
+   Alerts
+======================================== */
+.block-error,
+.block-success {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.block-error {
+    background-color: rgba(194, 120, 120, 0.12);
+    border: 1px solid var(--loss);
+    border-left-width: 4px;
+    color: var(--loss);
+}
+
+.block-error::before {
+    content: "⚠";
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.block-success {
+    background-color: rgba(107, 142, 107, 0.12);
+    border: 1px solid var(--gain);
+    border-left-width: 4px;
+    color: var(--gain);
+}
+
+.block-success::before {
+    content: "✓";
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.block-error ul,
+.block-success ul {
+    margin: 0;
+    padding-left: 16px;
+}
+
+/* ========================================
+   Template classes used on links
+======================================== */
+a.user-menu,
+a.balance-card,
+a.add-btn,
+a.staking-btn,
+a.filter-tab,
+a.btn,
+a.action-btn {
+    text-decoration: none;
+}
+
+a.staking-btn,
+a.btn {
+    display: inline-block;
+    text-align: center;
+}
+
+a.staking-btn {
+    display: block;
+}
+
+a.logo {
+    text-decoration: none;
+}
+
+/* ========================================
+   Layout helpers
+======================================== */
+.section-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.card + .card,
+.card + .section-title,
+.card + .market-stats,
+.card + .balance-cards {
+    margin-top: 24px;
+}
+
+.balance-icon svg {
+    stroke: var(--accent-copper);
+}
+
+.balance-card.primary .balance-icon svg {
+    stroke: #1c1c1e;
+}
+
+.form-group .btn-group {
+    margin-top: 0;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: wait;
+    transform: none;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 24px 0;
+    color: var(--text-secondary);
+}
+
+.empty-state .btn {
+    margin-top: 16px;
+}
+
+/* ========================================
+   Place Card (based on .staking-card)
+======================================== */
+.place-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.place-card .staking-header {
+    align-items: flex-start;
+}
+
+.place-card .staking-icon {
+    background: var(--accent-gradient);
+    color: #1c1c1e;
+    flex-shrink: 0;
+}
+
+.place-card .staking-title {
+    flex: 1;
+    min-width: 0;
+}
+
+.place-description {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+.place-card .staking-details {
+    gap: 16px;
+}
+
+.place-card .staking-value {
+    text-align: right;
+}
+
+.place-card .staking-btn {
+    margin-top: auto;
+}
+
+/* ========================================
+   Tables
+======================================== */
+.market-table th a {
+    color: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.market-table th a:hover,
+.market-table th a.active {
+    color: var(--accent-copper);
+}
+
+.market-table .profile-badge {
+    margin-top: 0;
+}
+
+.role-form {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.role-form .form-select {
+    min-width: 120px;
+    padding: 8px 40px 8px 12px;
+    font-size: 14px;
+}
+
+/* ========================================
+   Pagination (based on .filter-tabs)
+======================================== */
+.pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.pagination .filter-tab.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+/* ========================================
+   Auth page
+======================================== */
+a.auth-tab {
+    text-align: center;
+    text-decoration: none;
+}
+
+.auth-form-wrapper .form-footer {
+    margin-top: 8px;
+}
+
+@media (max-width: 640px) {
+    .transaction-item {
+        flex-wrap: wrap;
+    }
+
+    .role-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
